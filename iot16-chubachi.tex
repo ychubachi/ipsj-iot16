@@ -5,6 +5,7 @@
 \documentclass[techrep]{ipsjpapers}
 
 \usepackage[dvips]{graphicx}
+\AtBeginDvi{\special{landscape}} % dvipdfmx用の設定
 
 \setcounter{volpageoffset}{1}
 \setcounter{年数}{2999}
@@ -77,30 +78,190 @@ The Advanced Institute of Industrial Technology (AIIT) is a professional
 
 % 本文はここから始まる
 \section{はじめに}
-
 産業技術大学院大学（以下，本学）は，高度専門職を養成するための専門職大学
 院である．高度専門職等の知的労働者には，専門分野の知識・スキルを最新に維
 持するための継続教育が必要であることが指摘されている\cite{drucker03}．本
-学では，高度専門職の養成及び継続教育に対し，図 1に示す3段階の教育機会を提
-供している\cite{ishijima10,chubachi10}．
+学では，高度専門職の養成及び継続教育に対し，図\ref{stages}に示す3段階の教
+育機会を提供している\cite{ishijima10,chubachi10}．
 
  \begin{figure}[tb]
-  \includegraphics[width=100mm]{figure/stages.eps}
-  \caption{日本語}
-  \ecaption{英語}
-  \label{lab}
+   \begin{center}
+    \includegraphics[width=80mm]{figure/stages.eps}
+   \end{center}
+  \caption{3段階の教育機会}
+  \ecaption{Three stages of learning.}
+  \label{stages}
  \end{figure}
 
+本学では，開学当初から平日夜間・土曜昼間の授業開講，長期履修生制度等，社
+会人が学修できる環境を整備してきた。これらの取り組みが学生の構成にも反映
+され，本学産業技術研究科では，2011年度の学生の約60\%が社会人，平均年齢は
+33.2歳であり，著者らが所属する情報アーキテクチャ専攻では，約90\%が社会人，
+平均年齢は36.2歳である．本学の学生の特徴を表!!! に示す．
+
+本学が設置する大学院修士課程は図\ref{stages}の第2段階に相当するが，本学で
+は，修士課程の学生以外の一般の知的労働者にも継続教育の機会を提供している．
+以下に，本学が，学継続教育の対象である社会人に対して整備してきた学修環境
+の抜粋を示す。
+
+\begin{itemize}
+ \item 単位バンク制度（入学前に科目等履修生制度で履修した分の授業料が入
+       学後に返還される）
+ \item 各種勉強会（InfoTalk等）開催\cite{infotalk, infotalk2}
+ \item 履修証明プログラムの開催（短期間で専門分野の学修）
+ \item 附属図書館の地域企業技術者への開放
+\end{itemize}
+
+
+本学の産業技術研究科の収容定員が2専攻2学年で200名であるのに対し，科目等
+履修生制度で履修している学生数は平成21年度が68名，平成22年度が72名，平成
+23年度51名である。本学の単位バンク制度を利用すれば，入学前に科目等履修生
+制度で履修した分の授業料が入学後に返還される。平成22 年度は20名が，平成
+23年度は21名がこの制度を利用し，入学前に平均約3.5科目（最高10科目）を履
+修してから大学院に入学している。
+
+\begin{table}
+ \CaptionType{table}
+ \caption{本学の学生の特徴}
+ \ecaption{Charactaristics of students.}
+ \label{charactaristics}
+ \begin{center}
+ \begin{tabular}{ccc}
+  \hline\hline
+  & 産業技術大学院大学 & 通常の大学あるいは大学院 \\\hline
+  種類       & 社会人学生が多い & 新卒学生が多い \\
+  年齢層    & 20歳台後半から60歳台まで & 18歳から27歳 \\
+  & （30歳台が多い） & \\
+  業務経験       & 有するものが多い & 無し \\
+  意識 & 高い職業意識 & 研究者希望，就職希望等多様 \\
+ \end{tabular}
+ \end{center}  
+\end{table}
+
+本学は通信制大学院では無いため，実際の授業に出席する必要があるが，社会人
+学生が修学時間を潤沢に確保することが難しい事情を考慮し，彼らが効率的及び
+効果的に学ぶことができるように，時間及び場所の制約を軽減する等，ICT環境を
+整備している。また，ICT環境は社会人学生を適確に教育・評価することができる
+ようにする目的にも活用されている。
+
+本稿では，現在まで約6年間運用してきた経験から得られたノウハウ及びこれを活
+かして現在準備中の次期システムの設計に関する報告を行う．本稿の以下の2.で
+は，本学のICT環境の概要を示し，3.及び4.では，特に授業動画配信，PBL支援，
+サテライトキャンパスの運用及び課題を示し，最後の5.では，本稿の研究報告を
+まとめる．
+
+\section{本学のICT環境の概要}
+
+本学では，電子メールから始まり，無線LAN・グループウェア・遠隔授業，LMS，
+授業動画コンテンツ配信，iPBL，サテライトキャンパス等のICT環境を整備して
+いる。以下に概要を列挙する。（学生が円滑にPC・ICTを活用できる環境の整備，
+時間及び場所の制約を減らし，授業以外は無理に大学に来る必要が無い）
+
+\begin{itemize}
+ \item 高速インターネット接続，無線LAN，電源
+ \item 電子メール
+ \item グループウェア
+       \begin{itemize}
+	\item 掲示板（連絡事項，就職情報等），電子会議，申請書類
+	\item スケジューラ，施設予約
+       \end{itemize}
+ \item 授業支援（LMS）
+       \begin{itemize}
+	\item 授業資料（PDF等）配布
+	\item 課題提出
+       \end{itemize}
+ \item 授業動画配信（参考文献）
+       \begin{itemize}
+	\item すべての授業が収録され，インターネット経由で配信されている。
+       \end{itemize}
+ \item PBL（Project based Learning）支援（iPBL: infrastructure for PBL）
+       \begin{itemize}
+	\item プロジェクト管理（協働作業支援） → ファイル，ソースコード，
+	      タスク，スケジュール等の管理
+	\item プロジェクト活動の評価 → 活動の計画・実績，週報，SA，成果物，成績
+       \end{itemize}
+ \item 学修成果の蓄積（ポートフォリオ）（参考文献）
+       \begin{itemize}
+	\item 学習成果（作品，成績，評価）→ 業務実績相当
+	\item 評価（教員）
+	\item 改善（学生）→ Design-Publish-Collect-Reflectサイクル
+	\item 成果の公表（会社あるいはコミュニティ）
+       \end{itemize}
+ \item ほか
+       \begin{itemize}
+	\item 学生授業評価，PBL配属希望等はWebから回答・登録が可能（参考
+	      文献）
+	\item Facebook，Twitter等の活用（コネクション構築支援等）（参考文献）
+       \end{itemize}
+ \item 遠隔授業
+       \begin{itemize}
+	\item 一部の授業は秋葉原サテライトキャンパスでも受講できる。
+       \end{itemize}
+\end{itemize}
+
+
+今回は現在まで約6年間運用してきた経験から得られたノウハウ（課題）
+
+	容量
+	バグ，不安定（稼働率）
+	利用者の環境
+	Windows → MacOS，iOS，Androidの増加  
+IE → Firefiox，Safari，Chromeの増加
+	容量
+	機能の過不足
+	セキュリティ
+
+　現在まで約6年間運用してきた経験から得られたノウハウ及びこれを活かして
+現在準備中の次期システムの設計及び開発に関する報告．
+
+\section{おわりに}
+本研究では，小規模で，歴史が浅い大学院大学で，学生及び修了生ができるだけ
+効率的にまた効果的に，相互にコネクションを構築することができる仕組みを
+ICT を活用して実現した．以下に，特長を整理する．
 外部アカウント・・・\cite{koyama11}
 
+(1)	Facebook等の普及しているソーシャルメディアを活用しているため，利用者が新規にアカウントを取得する手間や，使用法を新たに修得する必要が無い．
 
-\cite{infotalk}
-\cite{infotalk2}
+(2)	既存のソーシャルメディアに準備されている機能はできるだけ流用しているので，開発コストを軽減することができた．
+
+(3)	利用者各自のソーシャルグラフの範囲外の相手を，在籍年時，専攻，専門分野等から検索し，コネクションを構築することができる．また，複数のソーシャルアカウントの情報が集約されているので，日常使っているソーシャルメディアが違う相手を発見することができる．
+
+(4)	専門職を対象に，職務経歴をプロジェクト単位で登録することができる．実際の経験してきた業務の内容，規模，技術，成否等をから，専門職の専門分野，レベルを示すことができ，今後のキャリアアップに結び付けることが期待できる．
+
+今後の課題には（1）利用者からの使い勝手・機能等の要望を反映する，（2）利用者の範囲を修了生，創造技術専攻に拡げる，（3）専門職・技術者を雇用する側の企業からの参加を考慮する，（4）知識・スキルを取り扱う機能を準備する，（5）創造技術専攻の専門分野[ ]を対象にした職務経歴の記録を考慮する，等がある．
+
+
+
+ \begin{figure}[tb]
+   \begin{center}
+    \includegraphics[width=100mm]{figure/17.eps}
+   \end{center}
+  \caption{3段階の教育機会}
+  \ecaption{Three Stages of Learning}
+  \label{stages2}
+ \end{figure}
+
+ \begin{figure}[tb]
+   \begin{center}
+    \includegraphics[width=100mm]{figure/32.eps}
+   \end{center}
+  \caption{3段階の教育機会}
+  \ecaption{Three Stages of Learning}
+  \label{stages3}
+ \end{figure}
+
+ \begin{figure}[tb]
+   \begin{center}
+    \includegraphics[width=100mm]{figure/37.eps}
+   \end{center}
+  \caption{3段階の教育機会}
+  \ecaption{Three Stages of Learning}
+  \label{stages4}
+ \end{figure}
 
 \bibliographystyle{ipsjunsrt}
 \bibliography{bibchubachi}
-
-\footnotetext[1]{実際の著者は情報処理学会 論文誌編集委員会である．}
+\newpage
 
 情報処理学会では，論文誌を迅速かつ低コストで出版するために {\LaTeX} による製版
 を採用している．この製版方式では，著者が作成した {\LaTeX} ソースが基本的にはそ

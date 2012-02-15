@@ -1,0 +1,8 @@
+-q
+-dNOPAUSE
+-sDEVICE=pbmraw
+-sOUTPUTFILE=stages.pbm
+-r300
+-g945x698
+tmp$.ps
+quit.ps
