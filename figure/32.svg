@@ -10,12 +10,15 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="297mm"
-   height="210mm"
+   width="580"
+   height="420"
    id="svg4890"
    version="1.1"
-   inkscape:version="0.48.1 "
-   sodipodi:docname="新規ドキュメント 1">
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="32.svg"
+   inkscape:export-filename="/home/yc/git/ipsj-iot16/figure/32.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4892">
     <clipPath
@@ -23,27 +26,36 @@
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4917"
-         d="m 0,0 4960.67,0 0,7015.75 L 0,7015.75 0,0 z" />
+         d="m 0,0 4960.67,0 0,7015.75 L 0,7015.75 0,0 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
   </defs>
   <sodipodi:namedview
-     inkscape:document-units="mm"
+     inkscape:document-units="px"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.43415836"
-     inkscape:cx="490"
-     inkscape:cy="380"
+     inkscape:zoom="1.2279853"
+     inkscape:cx="393.01513"
+     inkscape:cy="224.96694"
      inkscape:current-layer="layer1"
      id="namedview4894"
      showgrid="false"
-     inkscape:window-width="1416"
-     inkscape:window-height="819"
-     inkscape:window-x="50"
-     inkscape:window-y="50"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1215"
+     inkscape:window-height="776"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0.4"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     borderlayer="false"
+     inkscape:showpageshadow="false"
+     showborder="true" />
   <metadata
      id="metadata4896">
     <rdf:RDF>
@@ -52,16 +64,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-22.309777,-294.16408)">
     <g
-       transform="matrix(0,1.25,1.25,0,5.2097264,5.4145221)"
+       transform="matrix(0,0.7428199,0.71253106,0,11.919972,281.58467)"
        inkscape:label="ink_ext_XXXXXX"
        id="g4907">
       <g
