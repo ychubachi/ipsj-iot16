@@ -231,11 +231,3 @@ iPBLのリプレース
 
 - 中鉢 欣秀
   yc@aiit.ac.jp
-
-テスト
-------
-.. image:: scale.svg
-
-テスト
-------
-.. image:: 670x428.svg
